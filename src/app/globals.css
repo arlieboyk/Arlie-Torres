@@ -1,3 +1,120 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#171717] text-white opacity-100;
+}
+
+.hide {
+  @apply opacity-0;
+}
+
+.show {
+  @apply opacity-100;
+}
+
+.loading {
+  @apply transition-all translate-x-2 opacity-100;
+}
+
+.hamburger {
+  @apply block md:hidden bg-white relative inset-0 space-y-1   hover:scale-105  cursor-pointer;
+}
+
+.top {
+  @apply absolute right-0 w-10 h-0.5 bg-gray-400;
+}
+
+.center {
+  @apply absolute top-1 right-0 w-6 h-0.5  bg-blue-400;
+}
+
+.bottom {
+  @apply absolute  top-3 right-0  w-4 h-0.5  bg-red-400;
+}
+
+/* icons intersecting api animation */
+.show-icons-animation {
+  opacity: 1;
+  @apply translate-x-0;
+}
+
+.stickySidebar {
+  position: -webkit-sticky;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow-x: hidden;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 100vh;
+  display: flex;
+}
+
+.loader {
+  position: relative;
+  width: 120px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #3b82f6;
+  animation: loading-bounce 0.5s ease-in-out infinite alternate;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 7px;
+  width: 45px;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 95px 0 #f2f2f2;
+  animation: loading-step 1s ease-in-out infinite;
+}
+
+@keyframes loading-bounce {
+  0% {
+    transform: scale(1, 0.7);
+  }
+
+  40% {
+    transform: scale(0.8, 1.2);
+  }
+
+  60% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    bottom: 140px;
+  }
+}
+
+@keyframes loading-step {
+  0% {
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0), 0 10px 0 #f2f2f2,
+      -35px 50px 0 #3b82f6, -70px 90px 0 #f2f2f2;
+  }
+
+  100% {
+    box-shadow: 0 10px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2,
+      -70px 90px 0 rgba(0, 0, 0, 0);
+  }
+}
