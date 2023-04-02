@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import SocialSideBar from "@/components/SocialSideBar";
-import { Inter, League_Spartan } from "next/font/google";
+import { League_Spartan } from "next/font/google";
 
 export const metadata = {
   title: "Arlie Torers",
