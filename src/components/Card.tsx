@@ -38,13 +38,10 @@ export default function Card() {
       />
       <div className="px-6 py-4">
         <p className="font-bold text-slightDark text-xl">About Me</p>
-        <small className="font-serif">Front-end developer</small>
+        <span className="text-red-500"> Front-end developer.</span>
 
-        <p></p>
         <p className="text-slightDark font-serif dark:text-gray-200">
-          About About Me. Interactive{" "}
-          <span className="text-red-500"> Front-end developer.</span> I'm Arlie
-          Torres, a 22-year-old Filipino a Front-end developer.
+          I'm Arlie Torres, a 22-year-old Filipino a Front-end developer.
         </p>
       </div>
       <div className="flex space-x-3 justify-evenly">

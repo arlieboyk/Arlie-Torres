@@ -23,7 +23,7 @@ body {
 }
 
 .hamburger {
-  @apply block md:hidden bg-white relative inset-0 space-y-1   hover:scale-105  cursor-pointer;
+  @apply block md:hidden relative inset-0 space-y-1   hover:scale-105  cursor-pointer;
 }
 
 .top {
