@@ -6,6 +6,8 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import photo from "../../public/ME.jpg";
+import Image from "next/image";
 
 export default function Card() {
   //   if (typeof window === "object") {
@@ -31,17 +33,19 @@ export default function Card() {
 
   return (
     <div className="w-11/12 md:max-w-sm   m-auto  overflow-hidden  p-5 rounded-lg  text-slightDark bg-white dark:bg-gray-900">
-      <img
-        className="w-full rounded-md"
-        src="https://scontent.fcrk1-4.fna.fbcdn.net/v/t39.30808-6/336363870_763727111815642_8988402854443241616_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGhMRTnJ1UZ6HJedJAooQ4uV0v5E-azvHVXS_kT5rO8dcHL5fTH7Eas1LCWwDqFhIYrJVp2zxwMJclwgpkDeK6h&_nc_ohc=xpZmGVHSJ8IAX9c85Y1&_nc_ht=scontent.fcrk1-4.fna&oh=00_AfAhI-LKCeNp5MPZHhHLbg26sDwLfpRcyWz7_Do9NUzRcQ&oe=642D8806"
+      <Image
+        className="rounded-md"
+        src={photo}
         alt="Sunset in the mountains"
+        width={500}
+        height={500}
       />
       <div className="px-6 py-4">
         <p className="font-bold text-slightDark text-xl">About Me</p>
         <span className="text-red-500"> Front-end developer.</span>
 
         <p className="text-slightDark font-serif dark:text-gray-200">
-          I'm Arlie Torres, a 22-year-old Filipino a Front-end developer.
+          I'm Arlie Torres, 22-year-old Filipino a Front-end developer.
         </p>
       </div>
       <div className="flex space-x-3 justify-evenly">
