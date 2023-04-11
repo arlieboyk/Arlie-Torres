@@ -2,10 +2,21 @@
 import { useState } from "react";
 import React from "react";
 import SideBar from "./SideBar";
+import { BsFillSunFill } from "react-icons/bs";
+import { MdDarkMode } from "react-icons/md";
+import Link from "next/link";
+import Contact from "./Contact";
 
 export default function Navbar() {
   const [darkToggle, setDarkToggle] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+
+  const [isContactVisible, setisContactVisible] = useState(false);
+
+  const handleContact = () => {
+    console.log(`cotact ${isContactVisible}`);
+    setisContactVisible(!isContactVisible);
+  };
 
   const handleSideBar = () => {
     setIsVisible(!isVisible);
@@ -48,19 +59,19 @@ export default function Navbar() {
               <p className="bottom"></p>
             </span>
 
-            <div className="hidden  md:flex space-x-3 ">
+            <div className="hidden items-center justify-center md:flex space-x-3 ">
               <p>
                 <span className="hover:text-secondary mx-2">//</span>
-                <span className=" hover:text-bgBlue text-lg  cursor-pointer text-secondary">
+                <Link
+                  href="/"
+                  className=" hover:text-bgBlue text-lg  cursor-pointer text-secondary"
+                >
                   Home
-                </span>
+                </Link>
               </p>
               <p>
-                <span className="hover:text-secondary cursor-pointer mx-2">
-                  {" "}
-                </span>{" "}
+                <span className="hover:text-secondary cursor-pointer mx-2"></span>
                 <a
-                  onClick={handleSideBar}
                   href="#work"
                   className=" hover:text-bgBlue text-lg cursor-pointer  text-secondary"
                 >
@@ -69,28 +80,40 @@ export default function Navbar() {
               </p>
               <p>
                 <span className="hover:text-secondary cursor-pointer mx-2">
-                  {" "}
                   //
                 </span>
-                <span className=" hover:text-bgBlue text-lg cursor-pointer  text-secondary">
+                <button
+                  onClick={handleContact}
+                  className=" hover:text-bgBlue text-lg cursor-pointer  text-secondary"
+                >
                   Contact
-                </span>
+                </button>
               </p>
-
-              <label className="">
-                <input
-                  type="checkbox"
-                  onClick={() => setDarkToggle(!darkToggle)}
-                />
-                <span className="slideBtnTg round"></span>
-              </label>
+              <p className="">
+                {darkToggle ? (
+                  <BsFillSunFill
+                    onClick={() => setDarkToggle(!darkToggle)}
+                    className="h-7 w-7 hover:bg-[#294d87] p-1 rounded-full cursor-pointer"
+                  />
+                ) : (
+                  <MdDarkMode
+                    onClick={() => setDarkToggle(!darkToggle)}
+                    className="h-7 w-7 hover:bg-[#294d87] duration-150 delay-100 p-1 rounded-full cursor-pointer"
+                  />
+                )}
+              </p>
             </div>
           </nav>
         </header>
       )}
-
+      <Contact isVisible={isContactVisible} toggleContact={handleContact} />
       {/* sidebar */}
-      <SideBar isVisible={isVisible} toggleSIdeBar={handleSideBar} />
+      <SideBar
+        isVisible={isVisible}
+        toggleSIdeBar={handleSideBar}
+        isContactVisible={isContactVisible}
+        toggleContact={handleContact}
+      />
     </>
   );
 }

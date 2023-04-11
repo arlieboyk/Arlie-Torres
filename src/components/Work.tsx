@@ -8,8 +8,14 @@ export default function Work() {
     <div className=" flex h-auto my-12 justify-center items-center mx-auto  text-black">
       {/* buraindo-1 */}
 
-      <div className="w-10/12 h-auto relative   inset-0 m-auto shadow  ">
-        <Image src={buraindoFirst} alt="" width={1000} height={1000} />
+      <div className="w-10/12 h-auto relative   inset-0 m-auto shadow  bg-white ">
+        <Image
+          src={buraindoFirst}
+          alt=""
+          width={1000}
+          height={1000}
+          className="h-auto w-auto"
+        />
         <div className="absolute left-[2rem] md:left-[4rem] top-[0.5rem] md:bottom-10 m-auto text-slightDark">
           <h2 className="font-bold text-2xl md:text-5xl ">Buraindo</h2>
           <p>A mobile application for controlling Iot devices</p>
@@ -22,6 +28,12 @@ export default function Work() {
           Visit work
           <FaArrowRight className="text-white absolute flex  m-auto right-2 top-0 bottom-0" />
         </Link>
+        <h2 className="text-black text-cneter font-semibold">Tech used:</h2>
+        <div className="w-2/4 space-x-1 bg-green-500  flex-wrap text-center py-2  text-white">
+          <span className=" bg-bgBlue/60 rounded py-1 px-2">React-Native</span>
+          <span className=" bg-bgBlue/60 rounded py-1 px-2"> Figma</span>
+          <span className=" bg-bgBlue/60 rounded py-1 px-2">Firebase</span>
+        </div>
       </div>
 
       {/* second work */}

@@ -1,12 +1,7 @@
 "use client";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { use, useEffect, useState } from "react";
-import logo from "../../public/at-logo.svg";
-import Navbar from "@/components/Navbar";
+import { useEffect, useState } from "react";
 import { FaLongArrowAltDown } from "react-icons/fa";
 import Card from "@/components/Card";
-import ScrollTop from "@/components/ScrollToTop";
 import Work from "@/components/Work";
 
 export default function Home() {
@@ -21,25 +16,10 @@ export default function Home() {
     }, 2000);
   }, []);
 
-  // useEffect(() => {
-  //   const navBar = document.querySelectorAll(".nav-bar");
-
-  //   if (loading) {
-  //     navBar.forEach((el) => {
-  //       el.classList.add("hide");
-  //       el.remove();
-  //     });
-  //   } else {
-  //     navBar.forEach((el) => {
-  //       el.classList.remove("hide");
-  //     });
-  //   }
-  // }, [loading]);
-
   return (
     <>
       {loading && (
-        <main className="flex w-full h-screen justify-center items-center">
+        <main className="flex w-screen h-screen z-[99] justify-center items-center">
           <div className="loader"></div>
         </main>
       )}
@@ -49,8 +29,7 @@ export default function Home() {
           loading ? "bg-blue-500 -translate-x-full" : "   translate-x-0"
         } `}
       >
-        <Navbar />
-
+        {/* <Navbar /> */}
         <div className="relative flex flex-col  space-y-32 md:space-x-12 lg:flex-row justify-between  w-full h-full inset-0 m-auto  overflow-hidden  ">
           {/* content */}
           <div className="py-32 relative top-[10rem]  m-auto w-3/4 h-full     ">
@@ -94,13 +73,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-
         {/* latest work */}
-        <section className="bg-slate-200 w-full h-full relative  md:px-20 py-20">
+        <section className="bg-slate-200 w-full h-auto relative  md:px-20 py-20">
           <div className="absolute flex flex-col  items-center justify-center w-20 h-auto md:-top-20 -top-[7rem] left-0 right-0 mx-auto">
             <a
               href="#work"
-              className="text-textColor hover:text-2xl font-serif scroll-smooth transition-transform text-xl"
+              className="text-textColor hover:text-2xl font-serif delay-100 duration-100 transition-all ease-linear text-xl"
             >
               Works
             </a>
@@ -109,19 +87,14 @@ export default function Home() {
           <h2 className="font-bold text-slightDark text-5xl text-center">
             Latest Work
           </h2>
-          <div>
-            <Work />
-            <Work />
-          </div>
+          <Work />
+          <Work />
         </section>
-
         <section id="about-me" className="h-screen bg-white">
           {/* card */}
           <Card />
         </section>
       </main>
-
-      <ScrollTop></ScrollTop>
     </>
   );
 }
