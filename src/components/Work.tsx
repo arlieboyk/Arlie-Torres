@@ -28,11 +28,12 @@ export default function Work() {
           Visit work
           <FaArrowRight className="text-white absolute flex  m-auto right-2 top-0 bottom-0" />
         </Link>
-        <h2 className="text-black text-cneter font-semibold">Tech used:</h2>
-        <div className="w-2/4 space-x-1 bg-green-500  flex-wrap text-center py-2  text-white">
+        <div className="w-2/4 space-x-1   flex-wrap text-center py-2  text-white">
           <span className=" bg-bgBlue/60 rounded py-1 px-2">React-Native</span>
           <span className=" bg-bgBlue/60 rounded py-1 px-2"> Figma</span>
-          <span className=" bg-bgBlue/60 rounded py-1 px-2">Firebase</span>
+          <span className=" bg-bgBlue/60 rounded py-1 px-2">
+            Firebase - Realtime
+          </span>
         </div>
       </div>
 

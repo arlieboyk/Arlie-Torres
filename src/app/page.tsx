@@ -82,9 +82,12 @@ export default function Home() {
             >
               Works
             </a>
-            <div id="work" className="h-[15rem] bg-slate-300 w-0.5"></div>
+            <div className="h-[15rem] bg-slate-300 w-0.5"></div>
           </div>
-          <h2 className="font-bold text-slightDark text-5xl text-center">
+          <h2
+            id="work"
+            className="font-bold text-slightDark text-5xl text-center"
+          >
             Latest Work
           </h2>
           <Work />

@@ -46,17 +46,16 @@ body {
 
 @layer {
   .sideBar-icon {
-    @apply relative flex items-center justify-center lg:h-[53px] lg:w-[53px] h-12 w-12 mb-2 mx-auto shadow-lg
+    @apply flex items-center justify-center lg:h-[53px] lg:w-[53px] h-12 w-12 mb-2 mx-auto shadow-lg
     bg-gray-800 bg-opacity-70 hover:bg-[#294d87] hover:text-white
-    hover:rounded-xl  transition-all duration-300 ease-linear;
-
+    hover:rounded-xl  transition-all duration-150 ease-linear;
     /* used this cause rounded-full doenst have smoorht transition on hover */
     border-radius: 50%;
   }
 }
 
 .sidebar-tooltip {
-  @apply absolute flex items-center  justify-center left-[-5rem] transition-all origin-right duration-100 scale-0  z-10 bg-blue-300/50 rounded px-2 py-1;
+  @apply absolute flex items-center  justify-center left-[-5rem] top-2 transition-all scale-0 origin-right duration-100  z-10 bg-blue-300/50 rounded px-2 py-1;
 }
 
 .content-disable {
@@ -70,8 +69,7 @@ body {
   top: 0;
   bottom: 0;
   right: 0;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto;
   height: 100vh;
   display: flex;
 }

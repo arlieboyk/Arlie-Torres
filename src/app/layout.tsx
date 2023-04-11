@@ -13,17 +13,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  /* id = "content"; */
   return (
     <html className={league.className} lang="en">
-      <body id="content">
+      <body className="relative">
+        <Navbar />
         <main className="flex relative ">
-          <Navbar />
-          <main className="flex-1  relative">
-            {children}
-            <aside className="stickySidebar  ">
-              <SocialSideBar />
-            </aside>
-          </main>
+          {children}
+          <SocialSideBar />
         </main>
       </body>
     </html>

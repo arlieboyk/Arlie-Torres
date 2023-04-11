@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isContactVisible, setisContactVisible] = useState(false);
 
   const handleContact = () => {
-    console.log(`cotact ${isContactVisible}`);
+    console.log(`contact ${isContactVisible}`);
     setisContactVisible(!isContactVisible);
   };
 
@@ -53,14 +53,14 @@ export default function Navbar() {
             </svg>
 
             {/* hamburger */}
-            <span className="hamburger w-12 h-12 " onClick={handleSideBar}>
+            <div className="hamburger w-12 h-12 " onClick={handleSideBar}>
               <p className="top "></p>
               <p className="center"></p>
               <p className="bottom"></p>
-            </span>
+            </div>
 
             <div className="hidden items-center justify-center md:flex space-x-3 ">
-              <p>
+              <div>
                 <span className="hover:text-secondary mx-2">//</span>
                 <Link
                   href="/"
@@ -68,17 +68,19 @@ export default function Navbar() {
                 >
                   Home
                 </Link>
-              </p>
-              <p>
-                <span className="hover:text-secondary cursor-pointer mx-2"></span>
+              </div>
+              <div>
+                <span className="hover:text-secondary cursor-pointer mx-2">
+                  //
+                </span>
                 <a
                   href="#work"
                   className=" hover:text-bgBlue text-lg cursor-pointer  text-secondary"
                 >
                   Work
                 </a>
-              </p>
-              <p>
+              </div>
+              <div>
                 <span className="hover:text-secondary cursor-pointer mx-2">
                   //
                 </span>
@@ -88,20 +90,18 @@ export default function Navbar() {
                 >
                   Contact
                 </button>
-              </p>
-              <p className="">
-                {darkToggle ? (
-                  <BsFillSunFill
-                    onClick={() => setDarkToggle(!darkToggle)}
-                    className="h-7 w-7 hover:bg-[#294d87] p-1 rounded-full cursor-pointer"
-                  />
-                ) : (
-                  <MdDarkMode
-                    onClick={() => setDarkToggle(!darkToggle)}
-                    className="h-7 w-7 hover:bg-[#294d87] duration-150 delay-100 p-1 rounded-full cursor-pointer"
-                  />
-                )}
-              </p>
+              </div>
+              {darkToggle ? (
+                <BsFillSunFill
+                  onClick={() => setDarkToggle(!darkToggle)}
+                  className="h-7 w-7 hover:bg-[#294d87] p-1 rounded-full cursor-pointer"
+                />
+              ) : (
+                <MdDarkMode
+                  onClick={() => setDarkToggle(!darkToggle)}
+                  className="h-7 w-7 hover:bg-[#294d87] duration-150 delay-100 p-1 rounded-full cursor-pointer"
+                />
+              )}
             </div>
           </nav>
         </header>
