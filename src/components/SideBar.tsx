@@ -1,25 +1,27 @@
 import React from "react";
-import {
-  FaClosedCaptioning,
-  FaFacebook,
-  FaGithub,
-  FaLinkedin,
-} from "react-icons/fa";
-import { SiClubhouse } from "react-icons/si";
-import { GrClose, GrFormClose } from "react-icons/gr";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { GrFormClose } from "react-icons/gr";
 interface SideBarProps {
   isVisible: boolean;
   toggleSIdeBar: () => void;
+  isContactVisible: boolean;
+
+  toggleContact: () => void;
 }
-export default function SideBar({ isVisible, toggleSIdeBar }: SideBarProps) {
+export default function SideBar({
+  isVisible,
+  toggleSIdeBar,
+  toggleContact,
+  isContactVisible,
+}: SideBarProps) {
   return (
     <div
       className={`absolute h-full md:hidden top-0   ${
         isVisible ? " translate-x-0" : "delay-300 -translate-x-full"
-      } z-20 h-screen w-full bg-blue-400  transition-transform`}
+      } z-[99] h-screen w-full  bg-blue-400 transition-transform`}
     >
       <div
-        className={` bg-bgDark relative h-screen w-full flex flex-col justify-center items-center   transition-all  top-0  ${
+        className={` bg-bgDark z-10 relative h-screen w-full flex flex-col justify-center items-center   transition-all  top-0  ${
           isVisible
             ? " translate-x-0  delay-300"
             : "duration-100 -translate-x-full "
@@ -36,29 +38,32 @@ export default function SideBar({ isVisible, toggleSIdeBar }: SideBarProps) {
         <div className="flex flex-col m-auto relative w-auto h-auto bottom-20 md:inset-0 text-center  space-y-8">
           <a
             onClick={toggleSIdeBar}
-            href="#hero"
-            className="text-3xl text-textColor font-semibold hover:text-bgBlue transition-all duration-500"
+            href="/"
+            className="text-3xl text-textColor font-semibold hover:text-bgBlue transition-all duration-300"
           >
             Home
           </a>
           <a
             onClick={toggleSIdeBar}
             href="#work"
-            className="text-3xl text-textColor font-semibold hover:text-bgBlue transition-all duration-500"
+            className="text-3xl text-textColor font-semibold hover:text-bgBlue transition-all duration-300"
           >
             Work
           </a>
           <a
-            onClick={toggleSIdeBar}
-            href="#hero"
-            className="text-3xl text-textColor font-semibold hover:text-bgBlue transition-all duration-500"
+            onClick={() => {
+              toggleSIdeBar();
+              toggleContact();
+            }}
+            // href="#hero"
+            className="text-3xl text-textColor font-semibold hover:text-bgBlue transition-all duration-300"
           >
             Contact
           </a>
           <a
             onClick={toggleSIdeBar}
             href="#about-me"
-            className="text-3xl text-textColor font-semibold hover:text-bgBlue transition-all duration-500"
+            className="text-3xl text-textColor font-semibold hover:text-bgBlue transition-all duration-300"
           >
             About me
           </a>
