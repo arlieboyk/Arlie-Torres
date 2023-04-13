@@ -2,7 +2,7 @@ import React from "react";
 import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 export default function SocialSideBar() {
   return (
-    <div className="stickySidebar ">
+    <div id="socialSideBar" className="stickySidebar ">
       <div className="px-4 py-2  hidden md:flex  w-auto  backdrop-filter backdrop-blur-lg  rounded-lg  m-auto  flex-col space-y-4">
         <SideBarIcon
           social="Github"

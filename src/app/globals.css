@@ -10,6 +10,12 @@ body {
   @apply bg-[#171717] text-white opacity-100;
 }
 
+.disable-scroll {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 .hide {
   @apply opacity-0;
 }
@@ -25,6 +31,8 @@ body {
 .hamburger {
   @apply block md:hidden relative inset-0 space-y-1   hover:scale-105  cursor-pointer;
 }
+
+/* hamburger menu*/
 
 .top {
   @apply absolute right-0 w-10 h-0.5 bg-gray-400;
@@ -58,12 +66,10 @@ body {
   @apply absolute flex items-center  justify-center left-[-5rem] top-2 transition-all scale-0 origin-right duration-100  z-10 bg-blue-300/50 rounded px-2 py-1;
 }
 
-.content-disable {
-  @apply overflow-hidden;
-}
-
 .stickySidebar {
   position: -webkit-sticky;
+  width: auto;
+  height: auto;
   position: fixed;
   z-index: 50;
   top: 0;

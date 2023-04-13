@@ -25,6 +25,7 @@ export default function Navbar() {
     <>
       {!isVisible && (
         <header
+          id="header"
           className={`nav-bar px-6 py-4 z-[99] w-full absolute top-0 backdrop-filter backdrop-lg ${
             darkToggle && "dark"
           }`}

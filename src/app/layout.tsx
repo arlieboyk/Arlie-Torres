@@ -18,7 +18,7 @@ export default function RootLayout({
     <html className={league.className} lang="en">
       <body className="relative">
         <Navbar />
-        <main className="flex relative ">
+        <main className="relative ">
           {children}
           <SocialSideBar />
         </main>
