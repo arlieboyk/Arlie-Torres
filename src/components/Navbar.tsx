@@ -10,7 +10,6 @@ import Contact from "./Contact";
 export default function Navbar() {
   const [darkToggle, setDarkToggle] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
   const [isContactVisible, setisContactVisible] = useState(false);
 
   const handleContact = () => {

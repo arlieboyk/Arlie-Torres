@@ -56,7 +56,7 @@ export default function SideBar({
               toggleContact();
             }}
             // href="#hero"
-            className="text-3xl text-textColor font-semibold hover:text-bgBlue transition-all duration-300"
+            className="text-3xl cursor-pointer text-textColor font-semibold hover:text-bgBlue transition-all duration-300"
           >
             Contact
           </a>

@@ -14,13 +14,14 @@ export default function Home() {
   useEffect(() => {
     setLoading(true);
     document.body.classList.add("disable-scroll");
-    socialSideBar?.classList.add("hidden");
-    header?.classList.add("scale-0");
+    socialSideBar?.classList.toggle("scale-0");
+    // header?.classList.add("scale-0");
 
     setTimeout(() => {
       document.body.classList.remove("disable-scroll");
-      socialSideBar?.classList.remove("hidden");
-      header?.classList.remove("scale-0");
+      socialSideBar?.classList.toggle("scale-0");
+
+      // header?.classList.remove("scale-0");
       setLoading(false);
     }, 2000);
   }, []);
