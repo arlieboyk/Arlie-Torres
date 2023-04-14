@@ -37,12 +37,14 @@ export default function SideBar({ isVisible, toggleContact }: ContactProps) {
         } duration-200 delay-200 transition-all  bg-opacity-100  bg-bgDark `}
       >
         <form className="w-4/5 my-16 flex flex-col">
+          <h1 className="font-bold text-3xl mb-5">Get in touch</h1>
+
           <label htmlFor="">Your name</label>
           <input
             type="text"
             className="border-none outline-none text-bgDark py-1 px-2 focus:border-none"
           />
-          <label htmlFor="" className="mt-5">
+          <label htmlFor="" className="mt-5 ">
             Email
           </label>
           <input
@@ -50,7 +52,7 @@ export default function SideBar({ isVisible, toggleContact }: ContactProps) {
             className="border-none outline-none text-bgDark py-1 px-2 focus:border-none"
           />
 
-          <label htmlFor="" className="mt-5">
+          <label htmlFor="" className=" mt-5">
             Message
           </label>
 
@@ -90,8 +92,8 @@ export default function SideBar({ isVisible, toggleContact }: ContactProps) {
       </div>
 
       {/* phones  */}
-      <form className="w-4/5 md:hidden flex flex-col">
-        <label htmlFor="name">Your name</label>
+      <form action="" className="   md:hidden flex flex-col ">
+        <label htmlFor="">Your name</label>
         <input
           type="text"
           id="name"
@@ -109,6 +111,9 @@ export default function SideBar({ isVisible, toggleContact }: ContactProps) {
         <label htmlFor="message" className="mt-5">
           Message
         </label>
+        <label htmlFor="" className=" mt-5">
+          Message
+        </label>
 
         <textarea className="border-none outline-none text-bgDark py-1 px-2 focus:border-none" />
         <input
@@ -116,9 +121,6 @@ export default function SideBar({ isVisible, toggleContact }: ContactProps) {
           type="text"
           className="border-none outline-none text-bgDark py-1 px-2 focus:border-none"
         />
-        <button type="submit" className="my-3 hover:border py-2 bg-pink-900">
-          Submit
-        </button>
 
         <a
           href="../../public/ME.jpg"
