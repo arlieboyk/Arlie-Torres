@@ -52,18 +52,16 @@ body {
   @apply translate-x-0;
 }
 
-@layer {
-  .sideBar-icon {
-    @apply flex items-center justify-center lg:h-[53px] lg:w-[53px] h-12 w-12 mb-2 mx-auto shadow-lg
+.sideBar-icon {
+  @apply flex items-center justify-center lg:h-[53px] lg:w-[53px] h-12 w-12 mb-2 mx-auto shadow-lg
     bg-gray-800 bg-opacity-70 hover:bg-[#294d87] hover:text-white
     hover:rounded-xl  transition-all duration-150 ease-linear;
-    /* used this cause rounded-full doenst have smoorht transition on hover */
-    border-radius: 50%;
-  }
+  /* used this cause rounded-full doenst have smoorht transition on hover */
+  border-radius: 50%;
 }
 
 .sidebar-tooltip {
-  @apply absolute flex items-center  justify-center left-[-5rem] top-2 transition-all scale-0 origin-right duration-100  z-10 bg-blue-300/50 rounded px-2 py-1;
+  @apply absolute flex items-center  justify-center left-[-5.5rem] top-2 transition-all scale-0 origin-right duration-100  z-10 bg-blue-300/50 rounded px-2 py-1;
 }
 
 .stickySidebar {
