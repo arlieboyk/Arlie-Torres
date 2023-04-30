@@ -71,6 +71,7 @@ export default function Navbar() {
               />
             </svg>
         <div className="flex flex-col-reverse items-end justify-center ">
+          <div className="md:hidden">
             {theme === "dark" ? (
               <>
                 <BsFillSunFill
@@ -85,6 +86,7 @@ export default function Navbar() {
                 className="h-7 w-7 hover:bg-[#222222] hover:text-textColor text-[#222222] duration-150 delay-100 p-1 rounded-full cursor-pointer"
                 />
                 )}
+                </div>
 
                 {/* hamburger */}
             <div className="hamburger w-12 h-12 " onClick={handleSideBar}>
