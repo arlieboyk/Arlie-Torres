@@ -48,7 +48,7 @@ export default function Navbar() {
           id="header"
           className={`nav-bar px-6 py-4 z-[99] dark:text-textColor text-[#222222]  w-full absolute top-0 backdrop-filter backdrop-lg`}
         >
-          <nav className="flex justify-between items-center">
+          <nav className="flex  justify-between items-center">
             <svg
               width="50"
               height="50"
@@ -70,12 +70,28 @@ export default function Navbar() {
                 stroke="white"
               />
             </svg>
+        <div className="flex flex-col-reverse items-end justify-center ">
+            {theme === "dark" ? (
+              <>
+                <BsFillSunFill
+                onClick={handleThemeSwitch}
+                className="h-7 w-7 hover:bg-textColor text-textColor hover:text-[#222222] p-1 rounded-full  duration-150 delay-100 cursor-pointer"
+                />
+               </>
+              ) : (
+                
+                <MdDarkMode
+                onClick={handleThemeSwitch}
+                className="h-7 w-7 hover:bg-[#222222] hover:text-textColor text-[#222222] duration-150 delay-100 p-1 rounded-full cursor-pointer"
+                />
+                )}
 
-            {/* hamburger */}
+                {/* hamburger */}
             <div className="hamburger w-12 h-12 " onClick={handleSideBar}>
               <p className="top "></p>
               <p className="center"></p>
               <p className="bottom"></p>
+            </div>
             </div>
 
             <div className="hidden items-center justify-center md:flex space-x-3 ">
