@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
 import SideBar from "./SideBar";
 import { BsFillSunFill } from "react-icons/bs";
@@ -8,10 +8,31 @@ import Link from "next/link";
 import Contact from "./Contact";
 
 export default function Navbar() {
-  const [darkToggle, setDarkToggle] = useState(false);
+  const [theme, setTheme] = useState("dark");
   const [isVisible, setIsVisible] = useState(false);
   const [isContactVisible, setisContactVisible] = useState(false);
 
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+    console.log(theme)
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   const handleContact = () => {
     console.log(`contact ${isContactVisible}`);
     setisContactVisible(!isContactVisible);
@@ -25,9 +46,7 @@ export default function Navbar() {
       {!isVisible && (
         <header
           id="header"
-          className={`nav-bar px-6 py-4 z-[99] w-full absolute top-0 backdrop-filter backdrop-lg ${
-            darkToggle && "dark"
-          }`}
+          className={`nav-bar px-6 py-4 z-[99] dark:text-textColor text-[#222222]  w-full absolute top-0 backdrop-filter backdrop-lg`}
         >
           <nav className="flex justify-between items-center">
             <svg
@@ -36,7 +55,7 @@ export default function Navbar() {
               viewBox="0 0 94 106"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="hover:scale-105 fill-white "
+              className="hover:scale-105 fill-slate-950 dark:fill-white "
             >
               <path
                 d="M17 47V87C17 87.5523 17.4477 88 18 88H30C30.5523 88 31 87.5523 31 87V47C31 46.4477 30.5523 46 30 46H24H18C17.4477 46 17 46.4477 17 47Z"
@@ -61,47 +80,49 @@ export default function Navbar() {
 
             <div className="hidden items-center justify-center md:flex space-x-3 ">
               <div>
-                <span className="hover:text-secondary mx-2">//</span>
+                <span className=" mx-2">//</span>
                 <Link
                   href="/"
-                  className=" hover:text-bgBlue text-lg  cursor-pointer text-secondary"
+                  className=" hover:text-bgBlue text-lg  cursor-pointer "
                 >
                   Home
                 </Link>
               </div>
               <div>
-                <span className="hover:text-secondary cursor-pointer mx-2">
-                  //
-                </span>
+              <span className=" mx-2">//</span>
                 <a
                   href="#work"
-                  className=" hover:text-bgBlue text-lg cursor-pointer  text-secondary"
+                  className=" hover:text-bgBlue text-lg cursor-pointer "
                 >
                   Work
                 </a>
               </div>
               <div>
-                <span className="hover:text-secondary cursor-pointer mx-2">
-                  //
-                </span>
+              <span className=" mx-2">//</span>
                 <button
                   onClick={handleContact}
-                  className=" hover:text-bgBlue text-lg cursor-pointer  text-secondary"
+                  className=" hover:text-bgBlue text-lg cursor-pointer  "
                 >
                   Contact
                 </button>
               </div>
-              {darkToggle ? (
+
+              {theme === "dark" ? (
+                <>
                 <BsFillSunFill
-                  onClick={() => setDarkToggle(!darkToggle)}
-                  className="h-7 w-7 hover:bg-[#294d87] p-1 rounded-full cursor-pointer"
-                />
+                onClick={handleThemeSwitch}
+                className="h-7 w-7 hover:bg-textColor text-textColor hover:text-[#222222] p-1 rounded-full  duration-150 delay-100 cursor-pointer"
+              />
+               </>
               ) : (
-                <MdDarkMode
-                  onClick={() => setDarkToggle(!darkToggle)}
-                  className="h-7 w-7 hover:bg-[#294d87] duration-150 delay-100 p-1 rounded-full cursor-pointer"
-                />
+              
+              <MdDarkMode
+              onClick={handleThemeSwitch}
+                className="h-7 w-7 hover:bg-[#222222] hover:text-textColor text-[#222222] duration-150 delay-100 p-1 rounded-full cursor-pointer"
+              />
               )}
+
+              {/* <button className="text-red-500" >dark</button> */}
             </div>
           </nav>
         </header>

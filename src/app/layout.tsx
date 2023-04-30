@@ -16,7 +16,7 @@ export default function RootLayout({
   /* id = "content"; */
   return (
     <html className={league.className} lang="en">
-      <body className="relative">
+      <body className="relative ">
         <Navbar />
         <main className="relative ">
           {children}

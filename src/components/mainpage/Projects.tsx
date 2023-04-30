@@ -7,7 +7,7 @@ export default function Projects() {
       <div className="absolute flex flex-col  items-center justify-center w-20 h-auto md:-top-20 -top-[7rem] left-0 right-0 mx-auto">
         <a
           href="#work"
-          className="text-textColor hover:text-2xl font-serif delay-100 duration-100 transition-all ease-linear text-xl"
+          className="text-[#222222] dark:text-textColor hover:text-2xl font-serif delay-100 duration-100 transition-all ease-linear text-xl"
         >
           Works
         </a>
@@ -18,6 +18,7 @@ export default function Projects() {
       </h2>
       <Work />
       <Work />
+ 
     </section>
   );
 }

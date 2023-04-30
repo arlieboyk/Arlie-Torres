@@ -9,19 +9,19 @@ export default function Hero({ loading }: Props) {
   return (
     <main
       id="hero"
-      className={` top-0  transition-all  w-full h-screen duration-100   ${
+      className={`dark:bg-[#222222] bg-[#f2f2f2] top-0  transition-all  w-full h-screen duration-100   ${
         loading ? "bg-blue-500 -translate-x-full" : "   translate-x-0"
       } `}
     >
-      <div className="relative flex flex-col  space-y-32 md:space-x-12 lg:flex-row justify-between  w-full h-full inset-0 m-auto  overflow-hidden  ">
+      <div className="relative flex flex-col  dark:text-textColor text-[#222222] space-y-32 md:space-x-12 lg:flex-row justify-between  w-full h-full inset-0 m-auto  overflow-hidden  ">
         {/* content */}
         <div className="py-32 relative top-[10rem]  m-auto w-3/4 h-full     ">
           <div className="mx-auto h-full w-auto flex flex-col space-y-6">
-            <h1 className="z-10 underline decoration-red-500 text-textColor text-5xl md:text-7xl font-extrabold">
+            <h1 className="z-10 underline decoration-red-500  text-5xl md:text-7xl font-extrabold">
               Arlie Torres
             </h1>
 
-            <i className="z-10 text-gray-200  font-serif font-normal text-lg">
+            <i className="z-10  font-serif font-normal text-lg">
               Front-end Developer
             </i>
             {/* button */}
@@ -29,7 +29,7 @@ export default function Hero({ loading }: Props) {
               <a
                 href="#about-me"
                 className="relative px-4 z-10 py-3 max-w-lg left-0  bg-gradient-to-r hover:transition-colors
-          hover:duration-1000  from-[#ef3837] font-bold to-[#f06047]"
+          hover:duration-1000 text-white from-[#ef3837] font-bold to-[#f06047]"
               >
                 About Me
                 <FaLongArrowAltDown className="absolute flex left-full m-auto top-0 bottom-0" />
@@ -41,7 +41,7 @@ export default function Hero({ loading }: Props) {
               xmlns="http://www.w3.org/2000/svg"
               data-start="0"
               data-duration="10"
-              className=" opacity-50  left-36 lg:left-2/4 top-20 md:left-1/3 absolute md:w-[20rem]  lg:w-[30rem] w-[14rem] max-h-min  transition-all    fill-[#3b82f6] "
+              className=" opacity-50  left-36 lg:left-2/4 top-20 md:left-1/3 absolute md:w-[20rem]  lg:w-[30rem] w-[14rem] max-h-min  transition-all  dark:fill-[#3b82f6]  fill-[#005df1] "
             >
               <path
                 d="M17 47V87C17 87.5523 17.4477 88 18 88H30C30.5523 88 31 87.5523 31 87V47C31 46.4477 30.5523 46 30 46H24H18C17.4477 46 17 46.4477 17 47Z"

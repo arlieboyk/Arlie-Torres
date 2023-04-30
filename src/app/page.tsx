@@ -9,8 +9,10 @@ import Projects from "@/components/mainpage/Projects";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  const socialSideBar = document.getElementById("socialSideBar");
-  const header = document.getElementById("header");
+  const socialSideBar = document.getElementById("#socialSideBar");
+
+
+  const header = document.getElementById("#header");
   useEffect(() => {
     setLoading(true);
     document.body.classList.add("disable-scroll");

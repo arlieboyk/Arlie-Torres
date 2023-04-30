@@ -10,30 +10,11 @@ import photo from "../../public/ME.jpg";
 import Image from "next/image";
 
 export default function Card() {
-  //   if (typeof window === "object") {
-  //     const target = document.querySelectorAll(".icons");
 
-  //     const observer = new IntersectionObserver(
-  //       (entries) => {
-  //         entries.forEach((el) => {
-  //           el.target.classList.toggle("show-icons-animation", el.isIntersecting);
-  //         });
-  //       },
-  //       {
-  //         threshold: 1,
-  //       }
-  //     );
-
-  //     target.forEach((target) => {
-  //       observer.observe(target);
-  //     });
-  //   } else {
-  //     // code is running in a non-browser environment
-  //   }
 
   return (
-    <section id="about-me" className="h-screen bg-white">
-      <div className="w-11/12 md:max-w-sm   m-auto  overflow-hidden  p-5 rounded-lg  text-slightDark bg-white dark:bg-gray-900">
+    <section id="about-me" className="h-screen dark:bg-[#222222] p-6 bg-white">
+      <div className="w-11/12 md:max-w-sm hover:scale-105 transition-all  m-auto  overflow-hidden  p-5 rounded-lg  text-slightDark bg-slate-50  dark:bg-[#333333]">
         <Image
           className="rounded-md"
           src={photo}
@@ -42,8 +23,8 @@ export default function Card() {
           height={500}
         />
         <div className="px-6 py-4">
-          <p className="font-bold text-slightDark text-xl">About Me</p>
-          <span className="text-red-500"> Front-end developer.</span>
+          <p className="font-bold dark:text-gray-200 text-xl">About Me</p>
+          <span className="dark:text-blue-400 text-red-500"> Front-end developer.</span>
 
           <p className="text-slightDark font-serif dark:text-gray-200">
             I'm Arlie Torres, 22-year-old Filipino a Front-end developer.
@@ -55,7 +36,7 @@ export default function Card() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <SiJavascript className="w-8 h-8  transition-all   text-bgDark hover:text-yellow-300" />
+            <SiJavascript className="w-8 h-8  transition-all  dark:text-gray-400 text-bgDark hover:text-yellow-300" />
           </motion.div>
 
           <motion.div
@@ -65,7 +46,7 @@ export default function Card() {
           >
             <SiReact
               id="icons"
-              className="transition-all  w-8 h-8 text-bgDark hover:text-blue-500"
+              className="transition-all  w-8 h-8 dark:text-gray-400 text-bgDark hover:text-blue-500"
             />
           </motion.div>
 
@@ -76,7 +57,7 @@ export default function Card() {
           >
             <SiTypescript
               id="icons"
-              className="transition-all  w-8 h-8 text-bgDark hover:text-blue-600"
+              className="transition-all  w-8 h-8 dark:text-gray-400 text-bgDark hover:text-blue-600"
             />
           </motion.div>
 
@@ -87,7 +68,7 @@ export default function Card() {
           >
             <SiTailwindcss
               id="icons"
-              className="transition-all  w-8 h-8 text-bgDark hover:text-blue-500"
+              className="transition-all  w-8 h-8 dark:text-gray-400 text-bgDark hover:text-blue-500"
             />
           </motion.div>
 
@@ -98,7 +79,7 @@ export default function Card() {
           >
             <SiHtml5
               id="icons"
-              className="transition-all  w-8 h-8 text-bgDark hover:text-orange-500"
+              className="transition-all  w-8 h-8 dark:text-gray-400 text-bgDark hover:text-orange-500"
             />
           </motion.div>
         </div>
