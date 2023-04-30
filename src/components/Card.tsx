@@ -13,8 +13,8 @@ export default function Card() {
 
 
   return (
-    <section id="about-me" className="h-screen dark:bg-[#222222] p-6 bg-white">
-      <div className="w-11/12 md:max-w-sm hover:scale-105 transition-all  m-auto  overflow-hidden  p-5 rounded-lg  text-slightDark bg-slate-50  dark:bg-[#333333]">
+    <section  className="h-screen w-full dark:bg-[#222222] p-6 bg-white">
+      <div className="w-full md:w-3/4 flex flex-col justify-center items-center transition-all  m-auto  overflow-hidden  p-5 rounded-lg  text-slightDark bg-slate-50  dark:bg-[#333333]">
         <Image
           className="rounded-md"
           src={photo}

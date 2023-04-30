@@ -9,19 +9,16 @@ import Projects from "@/components/mainpage/Projects";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  const socialSideBar = document.getElementById("#socialSideBar");
 
-
-  const header = document.getElementById("#header");
   useEffect(() => {
     setLoading(true);
     document.body.classList.add("disable-scroll");
-    socialSideBar?.classList.toggle("scale-0");
+    // socialSideBar?.classList.toggle("scale-0");
     // header?.classList.add("scale-0");
 
     setTimeout(() => {
       document.body.classList.remove("disable-scroll");
-      socialSideBar?.classList.toggle("scale-0");
+      // socialSideBar?.classList.toggle("scale-0");
 
       // header?.classList.remove("scale-0");
       setLoading(false);
