@@ -3,8 +3,8 @@ import Work from "../Work";
 
 export default function Projects() {
   return (
-    <section className="bg-slate-200 w-full h-auto relative  md:px-20 py-20">
-      <div className="absolute flex flex-col  items-center justify-center w-20 h-auto md:-top-20 -top-[7rem] left-0 right-0 mx-auto">
+    <section className="dark:bg-[#222222] bg-slate-200 w-full h-auto relative  md:px-20 ">
+      <div className="absolute flex flex-col  items-center justify-center w-20 h-auto -top-[12rem] left-0 right-0 mx-auto">
         <a
           href="#work"
           className="text-[#222222] dark:text-textColor hover:text-2xl font-serif delay-100 duration-100 transition-all ease-linear text-xl"

@@ -32,7 +32,7 @@ export default function Hero({ loading }: Props) {
           hover:duration-1000 text-white from-[#ef3837] font-bold to-[#f06047]"
               >
                 About Me
-                <FaLongArrowAltDown className="absolute flex left-full m-auto top-0 bottom-0" />
+                <FaLongArrowAltDown className="absolute dark:text-textColor text-[#222222] flex left-full m-auto top-0 bottom-0" />
               </a>
             </div>
             <svg

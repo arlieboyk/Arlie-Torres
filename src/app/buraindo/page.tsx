@@ -1,8 +1,14 @@
+import AddTodo from "@/components/Todo/AddTodo";
 import React from "react";
+import Todos from "../../components/Todo/Todos";
 
 export default function Buraindo() {
   return (
-    <div className="my-12 bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
+    <main className="flex flex-col space-y-6 py-26 bg-slate-50 dark:bg-[#222222] h-screen">
+        <Todos />
+      <AddTodo />
+
+    {/* <div className="my-12 bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
       <div>
         <span className="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
           <svg
@@ -22,6 +28,7 @@ export default function Buraindo() {
         The Zero Gravity Pen can be used to write in any orientation, including
         upside-down. It even works in outer space.
       </p>
-    </div>
+    </div> */}
+    </main>
   );
 }

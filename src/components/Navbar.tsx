@@ -27,7 +27,7 @@ export default function Navbar() {
       document.documentElement.classList.remove("dark");
     }
 
-    console.log(theme)
+    console.log(theme);
   }, [theme]);
 
   const handleThemeSwitch = () => {
@@ -46,7 +46,7 @@ export default function Navbar() {
       {!isVisible && (
         <header
           id="header"
-          className={`nav-bar px-6 py-4 z-[99] dark:text-textColor text-[#222222]  w-full absolute top-0 backdrop-filter backdrop-lg`}
+          className={`nav-bar px-6 py-4 z-[99] bg-[#222222]  dark:text-textColor text-[#222222]  w-full  top-0 backdrop-filter backdrop-lg`}
         >
           <nav className="flex  justify-between items-center">
             <svg
@@ -70,30 +70,29 @@ export default function Navbar() {
                 stroke="white"
               />
             </svg>
-        <div className="flex flex-col-reverse items-end justify-center ">
-          <div className="md:hidden">
-            {theme === "dark" ? (
-              <>
-                <BsFillSunFill
-                onClick={handleThemeSwitch}
-                className="h-7 w-7 hover:bg-textColor text-textColor hover:text-[#222222] p-1 rounded-full  duration-150 delay-100 cursor-pointer"
-                />
-               </>
-              ) : (
-                
-                <MdDarkMode
-                onClick={handleThemeSwitch}
-                className="h-7 w-7 hover:bg-[#222222] hover:text-textColor text-[#222222] duration-150 delay-100 p-1 rounded-full cursor-pointer"
-                />
+            <div className="flex flex-col-reverse items-end justify-center ">
+              <div className="md:hidden">
+                {theme === "dark" ? (
+                  <>
+                    <BsFillSunFill
+                      onClick={handleThemeSwitch}
+                      className="h-7 w-7 hover:bg-textColor text-textColor hover:text-[#222222] p-1 rounded-full  duration-150 delay-100 cursor-pointer"
+                    />
+                  </>
+                ) : (
+                  <MdDarkMode
+                    onClick={handleThemeSwitch}
+                    className="h-7 w-7 hover:bg-[#222222] hover:text-textColor text-[#222222] duration-150 delay-100 p-1 rounded-full cursor-pointer"
+                  />
                 )}
-                </div>
+              </div>
 
-                {/* hamburger */}
-            <div className="hamburger w-12 h-12 " onClick={handleSideBar}>
-              <p className="top "></p>
-              <p className="center"></p>
-              <p className="bottom"></p>
-            </div>
+              {/* hamburger */}
+              <div className="hamburger w-12 h-12 " onClick={handleSideBar}>
+                <p className="top "></p>
+                <p className="center"></p>
+                <p className="bottom"></p>
+              </div>
             </div>
 
             <div className="hidden items-center justify-center md:flex space-x-3 ">
@@ -107,7 +106,7 @@ export default function Navbar() {
                 </Link>
               </div>
               <div>
-              <span className=" mx-2">//</span>
+                <span className=" mx-2">//</span>
                 <a
                   href="#work"
                   className=" hover:text-bgBlue text-lg cursor-pointer "
@@ -116,7 +115,7 @@ export default function Navbar() {
                 </a>
               </div>
               <div>
-              <span className=" mx-2">//</span>
+                <span className=" mx-2">//</span>
                 <button
                   onClick={handleContact}
                   className=" hover:text-bgBlue text-lg cursor-pointer  "
@@ -127,17 +126,16 @@ export default function Navbar() {
 
               {theme === "dark" ? (
                 <>
-                <BsFillSunFill
-                onClick={handleThemeSwitch}
-                className="h-7 w-7 hover:bg-textColor text-textColor hover:text-[#222222] p-1 rounded-full  duration-150 delay-100 cursor-pointer"
-              />
-               </>
+                  <BsFillSunFill
+                    onClick={handleThemeSwitch}
+                    className="h-7 w-7 hover:bg-textColor text-textColor hover:text-[#222222] p-1 rounded-full  duration-150 delay-100 cursor-pointer"
+                  />
+                </>
               ) : (
-              
-              <MdDarkMode
-              onClick={handleThemeSwitch}
-                className="h-7 w-7 hover:bg-[#222222] hover:text-textColor text-[#222222] duration-150 delay-100 p-1 rounded-full cursor-pointer"
-              />
+                <MdDarkMode
+                  onClick={handleThemeSwitch}
+                  className="h-7 w-7 hover:bg-[#222222] hover:text-textColor text-[#222222] duration-150 delay-100 p-1 rounded-full cursor-pointer"
+                />
               )}
 
               {/* <button className="text-red-500" >dark</button> */}

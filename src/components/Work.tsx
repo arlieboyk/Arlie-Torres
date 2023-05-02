@@ -5,7 +5,7 @@ import { FaArrowRight, FaLongArrowAltDown } from "react-icons/fa";
 import buraindoFirst from "../../public/work/buraindo1.png";
 export default function Work() {
   return (
-    <div className=" flex h-auto my-12 justify-center items-center mx-auto  text-black">
+    <div className="dark:bg-[#222222] flex h-auto my-12 justify-center items-center mx-auto  text-black">
       {/* buraindo-1 */}
 
       <div className="w-10/12 h-auto relative   inset-0 m-auto shadow  bg-white ">
